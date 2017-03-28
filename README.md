@@ -4,7 +4,7 @@ A PHP class for US zipcode objects.
 
 ## Install
 
-Normall install via Composer.
+Normal install via Composer.
 
 ## Usage
 

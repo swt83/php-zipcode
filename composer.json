@@ -1,5 +1,5 @@
 {
-    "name": "travis/zipfix",
+    "name": "travis/zipcode",
     "description": "A PHP class for US zipcode objects.",
     "homepage": "https://github.com/swt83/php-zipcode",
     "license": "MIT",
