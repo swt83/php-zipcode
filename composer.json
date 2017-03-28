@@ -1,0 +1,21 @@
+{
+    "name": "travis/zipfix",
+    "description": "A PHP function for splitting US zipcodes.",
+    "homepage": "https://github.com/swt83/php-zipfix",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Scott Travis",
+            "email": "scott.w.travis@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "files": [
+            "src/zipfix.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}
