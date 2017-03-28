@@ -1,6 +1,6 @@
-# Extraction
+# Zipcode
 
-A PHP function to safely extract information from a multi-dimensional object or array.
+A PHP class for US zipcode objects.
 
 ## Install
 
@@ -9,17 +9,15 @@ Normall install via Composer.
 ## Usage
 
 ```php
-$array = array(
-    'foo' => array(
-        'bar' => array(
-            'foo' => array(
-                'bar' => 'asdf'
-            )
-        )
-    )
-);
+use Travis\Zipcode;
 
-$value = ex($array, 'foo.bar.foo.bar'); // returns "asdf"
-$value = ex($array, 'foo.bar.foo.invalid_key'); // returns null
-$value = ex($array, 'foo.bar.foo.invalid_key', 'default'); // returns "default"
+$zip = Zipcode::make('6831-2525');
+echo $zip->five; // 06831
+echo $zip->four; // 2525
+echo $zip->full; // 06831-2525
+
+$zip = Zipcode::make('6831');
+echo $zip->five; // 06831
+echo $zip->four; // null
+echo $zip->full; // 06831
 ```

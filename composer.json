@@ -1,7 +1,7 @@
 {
     "name": "travis/zipfix",
-    "description": "A PHP function for splitting US zipcodes.",
-    "homepage": "https://github.com/swt83/php-zipfix",
+    "description": "A PHP class for US zipcode objects.",
+    "homepage": "https://github.com/swt83/php-zipcode",
     "license": "MIT",
     "authors": [
         {
@@ -13,9 +13,9 @@
         "php": ">=5.3.0"
     },
     "autoload": {
-        "files": [
-            "src/zipfix.php"
-        ]
+        "psr-4": {
+            "Travis\\": "src/"
+        }
     },
     "minimum-stability": "dev"
 }
