@@ -26,7 +26,21 @@ class Zipcode
 		}
 		else
 		{
-			$this->five = $str;
+			$len = strlen($str);
+
+			if ($len < 4)
+			{
+				// do nothing, invalid
+			}
+			elseif ($len >= 4 and $len <= 5)
+			{
+				$this->five = $str;
+			}
+			else
+			{
+				$this->four = substr($str, -4);
+				$this->five = substr($str, 0, -4);
+			}
 		}
 
 		$this->five = (string) str_pad($this->five, 5, '0', STR_PAD_LEFT);
