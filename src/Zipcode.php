@@ -28,11 +28,7 @@ class Zipcode
 		{
 			$len = strlen($str);
 
-			if ($len < 4)
-			{
-				// do nothing, invalid
-			}
-			elseif ($len >= 4 and $len <= 5)
+			if ($len <= 5)
 			{
 				$this->five = $str;
 			}
@@ -43,7 +39,7 @@ class Zipcode
 			}
 		}
 
-		$this->five = (string) str_pad($this->five, 5, '0', STR_PAD_LEFT);
+		$this->five = $this->five ? (string) str_pad($this->five, 5, '0', STR_PAD_LEFT) : null;
 		$this->four = $this->four ? (string) str_pad($this->four, 4, '0', STR_PAD_LEFT) : null;
 
 		$this->full = (string) $this->four ? $this->five.'-'.$this->four : $this->five;
